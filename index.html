@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFA Constructor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Theory Of Automata</h1>
+            <h2>DFA Constructor</h2>
+        </header>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="states">Enter States (comma separated):</label>
+                <input type="text" id="states" placeholder="e.g. A,B">
+            </div>
+
+            <div class="input-group">
+                <label for="alphabets">Enter Alphabets (comma separated):</label>
+                <input type="text" id="alphabets" placeholder="e.g. a,b">
+            </div>
+
+            <div class="input-group">
+                <label for="initialState">Enter Initial State:</label>
+                <input type="text" id="initialState" placeholder="e.g. A">
+            </div>
+
+            <div class="input-group">
+                <label for="finalStates">Enter Final State(s) (comma separated):</label>
+                <input type="text" id="finalStates" placeholder="e.g. A">
+            </div>
+
+            <button id="generateTransitions" class="blue-button">Generate Transitions</button>
+        </div>
+
+        <div id="transitionSection" class="hidden">
+            <h3>Define Transitions</h3>
+            <div id="transitionTable"></div>
+            <button id="createDFA" class="blue-button">Create DFA</button>
+        </div>
+
+        <div id="dfaVisualization" class="hidden">
+            <h3>DFA Visualization</h3>
+            <div class="canvas-container">
+                <canvas id="dfaCanvas" width="500" height="300"></canvas>
+            </div>
+            
+            <div class="string-test">
+                <h3>Test String Acceptance</h3>
+                <input type="text" id="testString" placeholder="Enter string to check">
+                <button id="checkString" class="blue-button">Check String</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
